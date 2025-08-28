@@ -22,16 +22,13 @@ public class InventoryButton {
         int guiLeft = screen.getGuiLeft();
         int guiTop = screen.getGuiTop();
 
-        int recipeX = guiLeft + 175;
-        int recipeY = guiTop + 5;
+        int shieldX = guiLeft - 20;
+        int shieldY = guiTop + 62;
 
-        int width = 20;
-        int height = 20;
+        int wButtonX = shieldX + 150;
+        int wButtonY = shieldY - 1;
 
-        int x = recipeX + width + 20;
-        int y = recipeY;
-
-        Button wButton = new Button(x, y, width, height, new StringTextComponent("W"), btn -> {
+        Button wButton = new Button(wButtonX, wButtonY, 20, 20, new StringTextComponent("W"), btn -> {
             if (Minecraft.getInstance().player != null) {
                 Minecraft.getInstance().player.connection.send(
                         new CChatMessagePacket("/openwarzone")
