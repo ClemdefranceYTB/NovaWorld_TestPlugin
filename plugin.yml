@@ -1,6 +1,0 @@
-name: NovaTest
-version: 1.0.0
-main: fr.clemdefrance.plugin.Main
-api-version: 1.13
-author: Clemdefrance
-description: Un plugin de text pour nova.
