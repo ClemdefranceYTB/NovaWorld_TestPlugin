@@ -28,24 +28,6 @@ public class NovaEventListener implements Listener {
     	this.plugin = main;
     }
 
-
-	@EventHandler
-    public void onJoin(PlayerJoinEvent event) {
-        Player player = event.getPlayer();
-        player.getInventory().clear();
-
-        ItemStack customswar = new ItemStack(Material.COMPASS, 1);
-        ItemMeta customM = customswar.getItemMeta();
-        customM.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&cWarzone"));
-        customM.setLore(Arrays.asList("Warzone1", "Warzone2", "Warzone3"));
-        customM.addEnchant(Enchantment.DAMAGE_ALL, 200, true);
-        customM.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-        customswar.setItemMeta(customM);
-
-        player.getInventory().setItem(8, customswar);
-        player.updateInventory();
-    }
-
     @EventHandler
     public void onInteract(PlayerInteractEvent event) {
         Player player = event.getPlayer();
